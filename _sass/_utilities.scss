@@ -109,18 +109,18 @@
 
 @media (min-width: $breakpoint-lg) {
 
-  .right-lg { float: right !important; }
-  .left-lg { float: left !important; }
+  // .right-lg { float: right !important; }
+  // .left-lg { float: left !important; }
 
   .absolute-lg { position: absolute; }
 
-  .block-lg { display: block !important; }
+  // .block-lg { display: block !important; }
   .inline-block-lg { display: inline-block; }
 
 }
 
 @media (max-width: $breakpoint-lg) {
-  .hide-sm { display: none !important; }
+  // .hide-sm { display: none !important; }
 }
 
 
