@@ -6,7 +6,6 @@
   {% include header.html %}
 
   <body>
-
     <div>
 
       <header class="clearfix">
@@ -21,18 +20,27 @@
       </header>
 
       <div class="prose container mx-auto px-2 py-2">
-          {% for image in site.static_files %}
-            {% if image.path contains 'images' %}
-                <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />zzz
-            {% endif %}
-          {% endfor %}
-        </div>
-
-      <div class="container mx-auto px-2 py-2">
-        {% for post in site.posts %}
-          {% include post_block.html %}
+        {% for image in site.static_files %}
+          {% if image.path contains 'images' %}
+              <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+          {% endif %}
         {% endfor %}
+
+        <hr>
+
+        {% for svg in site.svgfiles %}
+          {{ svg.content}} | {{svg.title}}
+        {% endfor %}
+
+
       </div>
+
+      <!-- display / or not posts -->
+      <!-- <div class="container mx-auto px-2 py-2">
+        {# % for post in site.posts %}
+          {# % include post_block.html %}
+        {# % endfor %}
+      </div> -->
 
     </div>
 
