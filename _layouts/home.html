@@ -20,7 +20,7 @@
       </header>
 
       <div class="prose container mx-auto px-2 py-2">
-        {% for image in site.static_files %}
+        {% for image in site.static_files reversed %}
           {% if image.path contains 'images' %}
             <div class="sm-width-full mt-2 mb-1">
               {{ image.basename }}
