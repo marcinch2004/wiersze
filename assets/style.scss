@@ -8,3 +8,15 @@
   "theme-{{ site.theme_color | default: "light" }}.scss"
   // "theme-{{ site.theme_fonts | default: "system" }}.scss"
 ;
+
+.navigation {
+  .navigation_item {
+    a {
+      text-decoration: none;
+      border-bottom: none;
+      &:hover {
+        border-bottom: 1px dotted;
+      }
+    }
+  }
+}
