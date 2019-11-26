@@ -22,16 +22,17 @@
       <div class="prose container mx-auto px-2 py-2">
         {% for image in site.static_files %}
           {% if image.path contains 'images' %}
-              <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
-              | {{ image.name }}
+            <div class="sm-width-full mt-2 mb-1">
+              {{ image.basename }}
+            </div>
+            <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
           {% endif %}
         {% endfor %}
 
-        <hr>
 
-        {% for svg in site.svgfiles %}
+        <!-- {% for svg in site.svgfiles %}
           {{ svg.content}} | {{svg.title}}
-        {% endfor %}
+        {% endfor %} -->
 
 
       </div>
