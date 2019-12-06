@@ -20,19 +20,21 @@
       </header>
 
       <div class="prose container mx-auto px-2 py-2">
+
+
+        
         {% for image in site.static_files reversed %}
-          {% if image.path contains 'images' %}
+        {% if image.path contains 'images' %}
+        {% capture ImageDate %} {{image.basename}} {% endcapture %}
+        {% assign ImageDate = ImageDate | date: "%d.%m.%Y" %}
+
             <div class="sm-width-full mt-2 mb-1">
-              {{ image.basename }}
+              <!-- {{ image.basename }} | -->
+              Opublikowano: {{ ImageDate }}
             </div>
             <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
           {% endif %}
         {% endfor %}
-
-
-        <!-- {% for svg in site.svgfiles %}
-          {{ svg.content}} | {{svg.title}}
-        {% endfor %} -->
 
 
       </div>
