@@ -21,6 +21,27 @@
 
       <div class="prose container mx-auto px-2 py-2">
 
+        <!-- display posts from category 'illustration' -->
+        {% for post in site.categories.illustration %}
+        <div class="sm-width-full mt-2 mb-1">
+
+          {{ post.title }}
+          Opublikowano: {{ post.date | date: "%d.%m.%Y" }}
+
+          <figure class="post_image-container">
+            <img src="{{ site.baseurl }}/{{ post.img }}" class="post-image">
+            <span class="post-text">{{ post.text }}</span>
+          </figure>
+
+
+          <!-- <hr>
+          <div style="background-image: url('{{ post.img }}')">
+            fotka
+          </div> -->
+
+
+        </div>
+        {% endfor %}
 
         
         {% for image in site.static_files reversed %}
@@ -36,17 +57,7 @@
           {% endif %}
         {% endfor %}
 
-
       </div>
-
-      <!-- display / or not posts -->
-      <!-- <div class="container mx-auto px-2 py-2">
-        {# % for post in site.posts %}
-          {# % include post_block.html %}
-        {# % endfor %}
-      </div> -->
-
-    </div>
 
     {% include footer.html %}
 
