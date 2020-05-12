@@ -1,11 +1,15 @@
 ---
 layout: wiersze
-title: Mały Janek
+title: ''
 date: 2020-05-12 22:00:00 +0000
-paragraph: |-
-  Jestem jaki jestem
-  Nie ma mnie, kiedy nie ma
-  Jestem, kiedy mnie nie ma
+paragraph: ''
 categories: wiersze
 
 ---
+## Mały Janek
+
+Jestem jaki jestem
+
+Nie ma mnie, kiedy nie ma
+
+Jestem, kiedy mnie nie ma
