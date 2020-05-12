@@ -11,6 +11,15 @@ fields:
 - type: datetime
   name: date
   label: date
+- name: paragraph
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Paragraph
 - type: text
   name: categories
   label: categories
